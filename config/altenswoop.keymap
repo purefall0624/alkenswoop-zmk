@@ -122,17 +122,17 @@
             #binding-cells = <0>;
             bindings = <&kp LA(I) &kp O>;
         };
-        m_screen_cap: m_screen_cap {
+        m_paren_quote: m_paren_quote {
             compatible = "zmk,behavior-macro";
-            label = "M_SCREEN_CAP";
+            label = "M_PAREN_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp>;
+            bindings = <&kp LEFT_PARENTHESIS &kp DOUBLE_QUOTES>;
         };
-        m_screen_rec: m_screen_rec {
+        m_lt_gt_left: m_lt_gt_left {
             compatible = "zmk,behavior-macro";
-            label = "M_SCREEN_REC";
+            label = "M_LT_GT_LEFT";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp LESS_THAN &kp GREATER_THAN &kp LEFT>;
         };
     };
 

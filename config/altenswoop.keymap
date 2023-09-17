@@ -142,7 +142,7 @@
         base {
             label = "Base";
             bindings = <
-&kp Q        &kp W         &kp E        &kp R                &kp T           &kp Y        &kp U                &kp I             &kp O         &kp P
+&kp Q        &kp W         &lt 4 E      &kp R                &kp T           &kp Y        &kp U                &lt 2 I           &kp O         &kp P
 &gqt LALT A  &gqt LSHFT S  &gqt LGUI D  &gqt LEFT_CONTROL F  &lt 1 G         &lt 1 H      &gqt LEFT_CONTROL J  &gqt LCMD K       &gqt LSHFT L  &gqt LALT SEMI
 &kp Z        &kp X         &kp C        &kp V                &kp B           &kp N        &kp M                &kp COMMA         &kp DOT       &kp FSLH
                            &none        &kp SPACE            &lt 4 ESCAPE    &lt 4 ENTER  &kp BACKSPACE        &kp K_PLAY_PAUSE

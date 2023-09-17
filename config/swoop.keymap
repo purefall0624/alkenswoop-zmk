@@ -5,7 +5,9 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -182,10 +184,10 @@
         navigation {
             label = "NAV";
             bindings = <
-&kp F1        &kp F2          &kp F3        &kp F4            &kp F5    &kp F7    &kp F8      &kp F9  &kp F10    &kp F12
-&kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp F6    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT  &none
-&bootloader   &none           &none         &none             &none     &none     &none       &none   &none      &none
-                              &none         &trans            &trans    &kp TAB   &kp DELETE  &none
+&kp F1        &kp F2          &kp F3        &kp F4            &kp F5    &kp F7    &kp F8        &kp F9  &kp F10    &kp F12
+&kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp F6    &kp LEFT  &kp DOWN      &kp UP  &kp RIGHT  &none
+&none         &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1      &none     &none     &out OUT_TOG  &none   &none      &bootloader
+                              &none         &trans            &trans    &kp TAB   &kp DELETE    &none
             >;
 
             sensor-bindings =

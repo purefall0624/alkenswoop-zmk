@@ -4,4 +4,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "../../../swoop.keymap"
+#include "../../../altenswoop.keymap"

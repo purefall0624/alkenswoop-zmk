@@ -1,0 +1,13 @@
+file_format: "1"
+id: altenswoop
+name: altenswoop
+type: shield
+url: https://github.com/SuperFola/arkenswoop
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - encoders
+siblings:
+  - altenswoop_left
+  - altenswoop_right

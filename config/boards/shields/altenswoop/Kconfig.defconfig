@@ -1,17 +1,17 @@
 # Copyright (c) 2022 Duccio Breschi
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SWOOP_LEFT
+if SHIELD_ALTENSWOOP_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "swoop"
+    default "altenswoop"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_SWOOP_LEFT || SHIELD_SWOOP_RIGHT
+if SHIELD_ALTENSWOOP_LEFT || SHIELD_ALTENSWOOP_RIGHT
 
 config ZMK_SPLIT
     default y

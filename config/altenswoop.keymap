@@ -43,6 +43,19 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
         };
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
+        };
     };
 
     combos {
@@ -51,24 +64,6 @@
         capslock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <11 18>;
-            layers = <0>;
-        };
-
-        dh {
-            bindings = <&m_paren_quote>;
-            key-positions = <12 15>;
-            layers = <0>;
-        };
-
-        gh {
-            bindings = <&kp MINUS>;
-            key-positions = <14 15>;
-            layers = <0>;
-        };
-
-        s, {
-            bindings = <&m_lt_gt_left>;
-            key-positions = <11 27>;
             layers = <0>;
         };
     };
@@ -142,10 +137,10 @@
         base {
             label = "Base";
             bindings = <
-&kp Q        &kp W         &lt 4 E      &kp R                &kp T           &kp Y        &kp U                &lt 2 I           &kp O         &kp P
-&gqt LALT A  &gqt LSHFT S  &gqt LGUI D  &gqt LEFT_CONTROL F  &lt 1 G         &lt 1 H      &gqt LEFT_CONTROL J  &gqt LCMD K       &gqt LSHFT L  &gqt LALT SEMI
-&kp Z        &kp X         &kp C        &kp V                &kp B           &kp N        &kp M                &kp COMMA         &kp DOT       &kp FSLH
-                           &none        &kp SPACE            &lt 4 ESCAPE    &lt 4 ENTER  &kp BACKSPACE        &kp K_PLAY_PAUSE
+&kp Q        &kp W  &kp E           &kp R            &kp T    &kp Y  &kp U            &kp I            &kp O        &kp P
+&kp A        &kp S  &kp D           &kp F            &kp G    &kp H  &ht RIGHT_ALT J  &ht RIGHT_GUI K  &ht RCTRL L  &kp BSPC
+&ht LSHFT Z  &kp X  &ht LEFT_ALT C  &kp V            &kp B    &kp N  &kp M            &kp COMMA        &kp FSLH     &ht RSHIFT RET
+                    &none           &ht LCTRL SPACE  &mo 1    &mo 1  &mo 2            &none
             >;
 
             sensor-bindings =
@@ -156,29 +151,29 @@
         symbols {
             label = "SYMBOLS";
             bindings = <
-&none   &kp LA(LS(N2))  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp LESS_THAN     &kp UNDER          &kp EQUAL      &kp HASH         &none
-&kp AT  &kp DOLLAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &kp MINUS         &kp DOUBLE_QUOTES  &kp APOS       &kp ASTERISK     &kp PLUS
-&none   &kp CARET       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE    &kp GREATER_THAN  &kp PERCENT        &kp AMPERSAND  &kp EXCLAMATION  &kp BACKSLASH
-                        &none                 &trans                 &trans       &trans            &trans             &none
+&kp N1     &kp N2  &kp N3         &kp N4   &kp N5     &kp N6    &kp N7     &kp N8     &kp N9    &kp N0
+&kp A      &kp S   &kp LC(SPACE)  &kp F    &kp G      &kp SEMI  &kp MINUS  &kp EQUAL  &kp SQT   &kp BSPC
+&kp LSHFT  &kp X   &kp ESC        &kp DEL  &kp TAB    &kp BSLH  &kp LBKT   &kp DOT    &kp LBRC  &kp RET
+                   &none          &trans   &trans     &trans    &trans     &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LEFT RIGHT>,
                 <&inc_dec_kp LG(Z) LG(LS(Z))>;
         };
 
         french {
             label = "FRENCH";
             bindings = <
-&none       &none       &m_e_cute  &m_e_grave  &none     &none   &m_ou       &none  &m_o_caret  &none
-&m_a_grave  &m_a_caret  &none      &m_e_caret  &none     &none   &m_u_caret  &none  &none       &none
-&none       &none       &kp LA(C)  &none       &none     &none   &none       &none  &none       &none
-                        &none      &trans      &trans    &trans  &trans      &none
+&kp F1        &kp F2        &kp F3        &kp F4      &kp F5     &kp F6      &kp F7          &kp F8       &kp F9    &kp F10
+&kp CAPSLOCK  &trans        &kp HOME      &kp END     &kp F11    &kp GRAVE   &kp C_PREVIOUS  &kp C_NEXT   &kp UP    &kp RIGHT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &kp F12    &kp K_MUTE  &trans          &kp LEFT     &kp DOWN  &trans
+                            &none         &trans      &trans     &kp C_PP    &trans          &bootloader
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LG(RIGHT) LG(LEFT)>,
-                <&inc_dec_kp F24 F24>;
+                <&inc_dec_kp C_PREVIOUS C_NEXT>,
+                <&inc_dec_kp C_VOL_DN C_VOLUME_UP>;
         };
 
         navigation {

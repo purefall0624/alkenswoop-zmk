@@ -115,7 +115,7 @@
 
         right_bkt {
             bindings = <&kp RBKT>;
-            key-positions = <6 7 10 20>;
+            key-positions = <6 7>;
         };
 
         left_brc {

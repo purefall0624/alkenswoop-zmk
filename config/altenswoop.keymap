@@ -16,6 +16,7 @@
             #binding-cells = <0>;
             bindings = <&mt LCTRL ESC>, <&kp TAB>;
         };
+
         gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "GLOBAL_QUICK_TAP";
@@ -26,6 +27,7 @@
             tapping-term-ms = <200>;
             global-quick-tap;
         };
+
         ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
@@ -36,6 +38,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
         };
+
         ht: ht {
             compatible = "zmk,behavior-hold-tap";
             label = "HT";
@@ -47,6 +50,7 @@
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
         };
+
         mtap: mtap {
             compatible = "zmk,behavior-hold-tap";
             label = "MTAP";
@@ -58,12 +62,14 @@
             global-quick-tap;
             flavor = "tap-preferred";
         };
+
         td_mo2_space: td_mo2_space {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MO2_SPACE";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&kp LCTRL>;
         };
+
         td_mo2_space_gui: td_mo2_space_gui {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MO2_SPACE_GUI";
@@ -189,54 +195,63 @@
             #binding-cells = <0>;
             bindings = <&kp LA(GRAVE) &kp A>;
         };
+
         m_a_caret: m_a_caret {
             compatible = "zmk,behavior-macro";
             label = "M_A_CARET";
             #binding-cells = <0>;
             bindings = <&kp LA(I) &kp A>;
         };
+
         m_e_cute: m_e_cute {
             compatible = "zmk,behavior-macro";
             label = "M_E_CUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp E>;
         };
+
         m_e_grave: m_e_grave {
             compatible = "zmk,behavior-macro";
             label = "M_E_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp LA(GRAVE) &kp E>;
         };
+
         m_e_caret: m_e_caret {
             compatible = "zmk,behavior-macro";
             label = "M_E_CARET";
             #binding-cells = <0>;
             bindings = <&kp LA(I) &kp E>;
         };
+
         m_ou: m_ou {
             compatible = "zmk,behavior-macro";
             label = "M_OU";
             #binding-cells = <0>;
             bindings = <&kp O &kp LA(GRAVE) &kp U>;
         };
+
         m_u_caret: m_u_caret {
             compatible = "zmk,behavior-macro";
             label = "M_U_CARET";
             #binding-cells = <0>;
             bindings = <&kp LA(I) &kp U>;
         };
+
         m_o_caret: m_o_caret {
             compatible = "zmk,behavior-macro";
             label = "M_O_CARET";
             #binding-cells = <0>;
             bindings = <&kp LA(I) &kp O>;
         };
+
         m_paren_quote: m_paren_quote {
             compatible = "zmk,behavior-macro";
             label = "M_PAREN_QUOTE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS &kp DOUBLE_QUOTES>;
         };
+
         m_lt_gt_left: m_lt_gt_left {
             compatible = "zmk,behavior-macro";
             label = "M_LT_GT_LEFT";
@@ -306,10 +321,10 @@
 
         numpad {
             bindings = <
-&none  &none  &none  &kp K      &none     &kp DOT       &kp N7  &kp N8  &kp N9  &kp STAR
-&none  &none  &none  &kp J      &none     &kp MINUS     &kp N4  &kp N5  &kp N6  &kp PLUS
-&none  &none  &none  &none      &none     &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &kp FSLH
-              &none  &kp LS(G)  &trans    &trans        &trans  &none
+&kp ESC    &kp Q  &kp W    &kp E      &kp R    &kp T   &kp Y   &kp U  &kp I      &kp O
+&kp LSHFT  &kp A  &kp S    &kp D      &kp F    &kp G   &kp H   &kp J  &kp K      &kp L
+&kp LCTRL  &kp Z  &kp X    &kp C      &kp V    &kp B   &kp N   &kp M  &kp COMMA  &kp RBKT
+                  &kp TAB  &kp SPACE  &mo 5    &trans  &trans  &none
             >;
 
             label = "NUM";
